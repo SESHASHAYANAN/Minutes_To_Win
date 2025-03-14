@@ -1,0 +1,347 @@
+/* StoryGame.css */
+.story-game {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #ff4500, #ff8e53);
+  color: white;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+}
+
+.score {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  border: 2px solid white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.start-screen {
+  max-width: 600px;
+  margin: 4rem auto;
+}
+
+.start-btn {
+  background: #4caf50;
+  color: white;
+  padding: 1.5rem 3rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 2rem;
+}
+
+.start-btn:hover {
+  transform: scale(1.05);
+}
+
+.game-area {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.current-plot {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+  border-radius: 15px;
+  margin: 2rem 0;
+}
+
+.story-chain {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.story-segment {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 15px;
+  min-width: 100px;
+}
+
+.emojis {
+  font-size: 2.5rem;
+}
+
+.emoji-form {
+  margin-top: 2rem;
+}
+
+.emoji-input {
+  font-size: 2rem;
+  padding: 1rem;
+  width: 300px;
+  text-align: center;
+  border: 3px solid white;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  margin-right: 1rem;
+}
+
+.submit-btn {
+  background: #2196f3;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: scale(1.05);
+}
+
+.results {
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.complete-story {
+  font-size: 1.5rem;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 2rem;
+  border-radius: 15px;
+  margin: 2rem 0;
+}
+
+.play-again {
+  background: #ffd700;
+  color: black;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .emoji-input {
+    width: 200px;
+    font-size: 1.5rem;
+  }
+
+  .story-segment {
+    padding: 1rem;
+  }
+
+  .emojis {
+    font-size: 1.8rem;
+  }
+}
+/* Add these styles to StoryGame.css */
+.rating-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  margin: 2rem auto;
+  max-width: 500px;
+  border: 2px solid;
+}
+
+.rating-box.good {
+  border-color: #4caf50;
+  box-shadow: 0 0 20px rgba(76, 175, 80, 0.3);
+}
+
+.rating-box.bad {
+  border-color: #f44336;
+  box-shadow: 0 0 20px rgba(244, 67, 54, 0.3);
+}
+
+.ranking {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.points {
+  font-size: 1.5rem;
+  color: #ffd700;
+  margin: 1rem 0;
+}
+
+.feedback {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.story-preview {
+  font-size: 2rem;
+  margin: 1.5rem 0;
+  min-height: 60px;
+}
+
+.final-story {
+  font-size: 1.5rem;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+}
+
+.instructions {
+  opacity: 0.8;
+  margin-top: 1rem;
+}
+
+.add-btn {
+  background: #2196f3;
+  padding: 0.8rem 2rem;
+  margin-left: 1rem;
+}
+
+.start-btn {
+  background: #4caf50;
+}
+/* StoryGame.css */
+.story-game {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #ff4500, #ff8e53);
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.score,
+.timer {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+}
+
+.story-flow {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.segment {
+  margin: 2rem 0;
+  animation: slideIn 0.5s ease;
+}
+
+.text-bubble {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 15px;
+  position: relative;
+  margin-left: 50px;
+}
+
+.text-bubble::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 15px;
+  border: 10px solid transparent;
+  border-right-color: rgba(255, 255, 255, 0.1);
+}
+
+.emoji-bubble {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 1.5rem;
+  border-radius: 15px;
+  font-size: 2rem;
+  text-align: center;
+  margin-right: 50px;
+  position: relative;
+}
+
+.emoji-bubble::after {
+  content: "";
+  position: absolute;
+  right: -20px;
+  top: 15px;
+  border: 10px solid transparent;
+  border-left-color: rgba(255, 255, 255, 0.2);
+}
+
+.emoji-form {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.emoji-input {
+  font-size: 2rem;
+  padding: 1rem;
+  width: 300px;
+  text-align: center;
+  border: 3px solid white;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.submit-btn {
+  background: #4caf50;
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+  transform: scale(1.05);
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.start-screen {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+.start-btn {
+  background: #2196f3;
+  color: white;
+  padding: 1.5rem 3rem;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .emoji-input {
+    width: 200px;
+    font-size: 1.5rem;
+  }
+
+  .text-bubble,
+  .emoji-bubble {
+    margin: 1rem 0;
+  }
+
+  .text-bubble::before,
+  .emoji-bubble::after {
+    display: none;
+  }
+}

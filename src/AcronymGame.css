@@ -1,0 +1,196 @@
+/* AcronymGame.css */
+.acronym-game {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #ff4500, #ff8e53);
+  color: white;
+  font-family: "Inter", sans-serif;
+}
+
+.acronym-game.nsfw {
+  background: linear-gradient(135deg, #8b0000, #ff6b6b);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.theme-notice {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.game-area {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.current-acronym {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.current-acronym form {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.current-acronym input {
+  flex: 1;
+  padding: 0.8rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.reset-btn {
+  background: #2196f3;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.submissions {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.submission {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+}
+
+.attempted-list {
+  grid-column: 1 / -1;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+.attempted-item {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 5px;
+}
+
+button {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .game-area {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Add these styles to your existing AcronymGame.css file */
+
+.timer {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.ending-message {
+  margin-top: 10px;
+  color: #666;
+  font-style: italic;
+}
+
+.score-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.score-popup {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  animation: popup 0.5s ease-out;
+  max-width: 80%;
+  width: 400px;
+}
+
+@keyframes popup {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.final-score {
+  font-size: 24px;
+  margin: 20px 0 10px;
+  font-weight: bold;
+  color: #4a4a4a;
+}
+
+.score-breakdown {
+  margin: 0 0 15px;
+  color: #666;
+}
+
+.close-popup {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.close-popup:hover {
+  background-color: #45a049;
+}
+
+/* Additional styles for disabled state */
+button:disabled,
+input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
